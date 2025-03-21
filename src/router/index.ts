@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Menu from '@/views/Menu.vue'
-import Products from '@/views/Products.vue'
-import Contact from '@/views/Contact.vue' // Contact sayfasını ekledik
-import About from '@/views/About.vue' // About sayfasını ekledik
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import Menu from '@/views/Menu.vue';
+import Products from '@/views/Products.vue';
+import Contact from '@/views/Contact.vue';
+import About from '@/views/About.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,21 +19,22 @@ const router = createRouter({
       component: Menu,
     },
     {
-      path: '/product',
+      path: '/products/:id',
       name: 'Products',
-      component: Products, // Ürün sayfasını burada belirtiyoruz
+      component: Products,
+      props: true // Parametreyi route üzerinden almak için
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact, // Contact sayfasını ekledik
+      component: Contact,
     },
     {
       path: '/about',
       name: 'About',
-      component: About, // About sayfasını ekledik
-    }
+      component: About,
+    },
   ],
-})
+});
 
-export default router
+export default router;

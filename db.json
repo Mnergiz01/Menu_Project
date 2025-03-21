@@ -1,0 +1,130 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Tatlı",
+      "image": "https://images.pexels.com/photos/18543486/pexels-photo-18543486/free-photo-of-tatli-baharatlar-abur-cubur-atistirmalik.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",  
+      "products": [
+        {
+          "id": 1,
+          "name": "Baklava",
+          "price": 50,
+          "description": "Lezzetli baklava",
+          "image": "https://images.pexels.com/photos/3822749/pexels-photo-3822749.jpeg"
+        },
+        {
+          "id": 2,
+          "name": "Künefe",
+          "price": 40,
+          "description": "Şerbetli tatlı",
+          "image": "https://images.pexels.com/photos/3788465/pexels-photo-3788465.jpeg"
+        },
+        {
+          "id": 3,
+          "name": "Kadayıf",
+          "price": 30,
+          "description": "Kadayıf tatlısı",
+          "image": "https://images.pexels.com/photos/3822750/pexels-photo-3822750.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dondurma",
+      "image": "https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",  
+      "products": [
+        {
+          "id": 4,
+          "name": "Çikolata Dondurma",
+          "price": 25,
+          "description": "Çikolatalı dondurma",
+          "image": "https://images.pexels.com/photos/3766123/pexels-photo-3766123.jpeg"
+        },
+        {
+          "id": 5,
+          "name": "Meyve Dondurması",
+          "price": 20,
+          "description": "Meyveli dondurma",
+          "image": "https://images.pexels.com/photos/1306745/pexels-photo-1306745.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "İçecek",
+      "image": "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",  
+      "products": [
+        {
+          "id": 6,
+          "name": "Kola",
+          "price": 10,
+          "description": "Kola içeceği",
+          "image": "https://images.pexels.com/photos/1676362/pexels-photo-1676362.jpeg"
+        },
+        {
+          "id": 7,
+          "name": "Su",
+          "price": 5,
+          "description": "Su içeceği",
+          "image": "https://images.pexels.com/photos/2053211/pexels-photo-2053211.jpeg"
+        },
+        {
+          "id": 8,
+          "name": "Ayran",
+          "price": 8,
+          "description": "Ayran içeceği",
+          "image": "https://images.pexels.com/photos/1893608/pexels-photo-1893608.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Kahvaltık",
+      "image": "https://images.pexels.com/photos/2113556/pexels-photo-2113556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",  
+      "products": [
+        {
+          "id": 9,
+          "name": "Zeytin",
+          "price": 15,
+          "description": "Kahvaltılık zeytin",
+          "image": "https://images.pexels.com/photos/1676826/pexels-photo-1676826.jpeg"
+        },
+        {
+          "id": 10,
+          "name": "Peynir",
+          "price": 25,
+          "description": "Peynir çeşitleri",
+          "image": "https://images.pexels.com/photos/1287702/pexels-photo-1287702.jpeg"
+        },
+        {
+          "id": 11,
+          "name": "Reçel",
+          "price": 12,
+          "description": "Çeşitli reçeller",
+          "image": "https://images.pexels.com/photos/1676362/pexels-photo-1676362.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Meşrubat",
+      "image": "https://images.pexels.com/photos/4033325/pexels-photo-4033325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",  
+      "products": [
+        {
+          "id": 12,
+          "name": "Fanta",
+          "price": 12,
+          "description": "Fanta içeceği",
+          "image": "https://images.pexels.com/photos/1581303/pexels-photo-1581303.jpeg"
+        },
+        {
+          "id": 13,
+          "name": "Sprite",
+          "price": 12,
+          "description": "Sprite içeceği",
+          "image": "https://images.pexels.com/photos/1986947/pexels-photo-1986947.jpeg"
+        }
+      ]
+    }
+  ]
+}
