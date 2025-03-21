@@ -4,14 +4,15 @@
     <Product :category="category" v-if="category" />
   
     <!-- Menüye geri dönme butonu -->
-    <router-link to="/menu">
-      <Back></Back>
-    </router-link>
+    
   
     <!-- Ürün Detayları (Body) -->
     <productBody :products="category?.products" v-if="category?.products?.length > 0" class="my-20" />
     <!-- Kategori bulunamazsa veya ürün yoksa mesaj -->
     <p v-else class="text-center text-xl">Bu kategoriye ait ürün bulunamadı.</p>
+    <router-link to="/menu">
+      <Back></Back>
+    </router-link>
   </div>
 </template>
 
