@@ -1,6 +1,6 @@
 <template>
   <!-- Arkaplan Videosu -->
-  <div class="relative w-screen bg-white text-black p-3 rounded-lg shadow-md">
+  <div class="relative w-full bg-white text-black p-3 rounded-lg shadow-md ">
     <!-- İçerik -->
     <div class="relative p-5">
       <div class="flex justify-between items-center mx-10 ">
@@ -24,14 +24,15 @@
       <!-- Dropdown Menu with AOS Animation -->
       <div v-if="dropdownOpen" class="rounded-lg mx-10 mt-5 text-black transition duration-200 " data-aos="fade-down" data-aos-duration="500">
         <ul class="block font-serif space-y-4 mt-10 font-light transition-all duration-500 ease-in">
-          <li class=" border-gray-300 border-b-[0.5px] pb-2" data-aos="fade-right" data-aos-delay="200">
-            AnaSayfa
+          <li class="border-gray-300 border-b-[0.5px] pb-2" data-aos="fade-right" data-aos-delay="200">
+            <router-link to="/" @click="closeDropdown" class="text-black hover:text-gray-600">Ana Sayfa</router-link>
           </li>
-          <li class=" border-gray-300 border-b-[0.5px] pb-2" data-aos="fade-right" data-aos-delay="400">
-            Hakkımızda
+          
+          <li class="border-gray-300 border-b-[0.5px] pb-2" data-aos="fade-right" data-aos-delay="200">
+            <router-link to="/about" @click="closeDropdown" class="text-black hover:text-gray-600">Hakkımızda</router-link>
           </li>
-          <li class=" border-gray-300 border-b-[0.5px] pb-2" data-aos="fade-right" data-aos-delay="600">
-            İletişim
+          <li class="border-gray-300 border-b-[0.5px] pb-2" data-aos="fade-right" data-aos-delay="400">
+            <router-link to="/contact" @click="closeDropdown" class="text-black hover:text-gray-600">İletişim</router-link>
           </li>
         </ul>
       </div>
@@ -50,6 +51,11 @@ const dropdownOpen = ref(false);
 // Toggle function for dropdown menu visibility
 const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
+};
+
+// Function to close the dropdown
+const closeDropdown = () => {
+  dropdownOpen.value = false;
 };
 
 // Initialize AOS on component mount

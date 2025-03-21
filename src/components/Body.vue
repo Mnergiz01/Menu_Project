@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-screen h-screen">
+    <div class="relative w-full h-screen">
         <!-- Arka Plan Videosu -->
         <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover blur-xs"
             src="@/assets/dondurma.mp4" type="video/mp4"></video>
@@ -14,17 +14,19 @@
                 </p>
             </div>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mt-8 justify-center bg-auto">
+               
+                    <button @click="loginmenu"
+                        class="border-2 border-white p-3 px-8 text-white font-semibold text-lg rounded-lg hover:bg-white hover:text-gray-800 transition duration-300 ease-in-out transform hover:scale-110 flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="#fff" stroke-width="2"
+                                d="M12 1v7c0 1.657-1.347 3-2.997 3H5.997A3 3 0 0 1 3 8V1m3 6V1m3 6V1M6 11v10.504C6 22.33 6.666 23 7.5 23c.828 0 1.5-.68 1.5-1.496V11m6 7v3.5a1.5 1.5 0 1 0 3-.005V15s3 0 3-3V7c0-3-2-5-6-5z" />
+                        </svg>
+                        <span>Menu</span>
+                    </button>
+                
                 <button
                     class="border-2 border-white p-3 px-8 text-white font-semibold text-lg rounded-lg hover:bg-white hover:text-gray-800 transition duration-300 ease-in-out transform hover:scale-110 flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" stroke="#fff" stroke-width="2"
-                            d="M12 1v7c0 1.657-1.347 3-2.997 3H5.997A3 3 0 0 1 3 8V1m3 6V1m3 6V1M6 11v10.504C6 22.33 6.666 23 7.5 23c.828 0 1.5-.68 1.5-1.496V11m6 7v3.5a1.5 1.5 0 1 0 3-.005V15s3 0 3-3V7c0-3-2-5-6-5z" />
-                    </svg>
-                    <span>Menu</span>
-                </button>
-                <button
-                    class="border-2 border-white p-3 px-8 text-white font-semibold text-lg rounded-lg hover:bg-white hover:text-gray-800 transition duration-300 ease-in-out transform hover:scale-110 flex items-center space-x-2">
-                    
+
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path stroke-dasharray="64" stroke-dashoffset="64"
@@ -48,13 +50,25 @@
                             </path>
                         </g>
                     </svg>
-                    <span>Contact</span>
+                    <router-link to="/contact"> <span>Contact</span> </router-link>
 
                 </button>
             </div>
         </div>
     </div>
 </template>
+
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const loginmenu = () => {
+    router.push({ name: "Menu" });
+}
+</script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');

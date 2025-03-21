@@ -1,11 +1,17 @@
 <template>
-  <div>
+  <div class="flex items-center justify-center">
+  <div class="container">
     <Navbar />
-    <HomeView />
-
+    <router-view></router-view>
+    <Footer /> <!-- Burada Footer olarak büyük harf ile kullanmalısınız -->
   </div>
+</div>
 </template>
+
 <script setup>
-import HomeView from "./views/HomeView.vue";
-import Navbar from "./components/Navbar.vue"; 
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue"; 
 </script>
+
+<style scoped>
+</style>
