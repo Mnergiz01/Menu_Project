@@ -1,18 +1,24 @@
 <template>
-  <div>
-    <!-- Ürünlerin üst kısmı (Kategori Bilgisi) -->
+  <div class="container mx-auto px-4 py-10">
+    <!-- Üst Bilgi: Kategori -->
     <Product :category="category" v-if="category" />
-  
-    <!-- Menüye geri dönme butonu -->
-    
-  
-    <!-- Ürün Detayları (Body) -->
-    <productBody :products="category?.products" v-if="category?.products?.length > 0" class="my-20" />
-    <!-- Kategori bulunamazsa veya ürün yoksa mesaj -->
-    <p v-else class="text-center text-xl">Bu kategoriye ait ürün bulunamadı.</p>
-    <router-link to="/menu">
-      <Back></Back>
-    </router-link>
+
+    <!-- Ürünler -->
+    <div v-if="category?.products?.length > 0" class="space-y-8 mt-10">
+      <productBody :products="category.products" />
+    </div>
+
+    <!-- Ürün yoksa mesaj -->
+    <p v-else class="text-center text-xl text-gray-600 my-12">
+      Bu kategoriye ait ürün bulunamadı.
+    </p>
+
+    <!-- Geri Dön Butonu -->
+    <div class="flex justify-center mt-10">
+      <router-link to="/menu">
+        <Back />
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -24,31 +30,18 @@ import productBody from '@/components/productBody.vue';
 import Back from '@/components/Back.vue';
 import { useRoute } from 'vue-router';
 
-// route parametrelerini almak için useRoute
 const route = useRoute();
-
-// categoryId'yi alıyoruz
 const categoryId = route.params.id;
-
-// kategoriyi tutacak bir ref oluşturuyoruz
 const category = ref(null);
 
-// JSON dosyasını axios ile alıp, kategoriyi buluyoruz
 onMounted(async () => {
   try {
-    // db.json dosyasını ana dizinden çağırıyoruz
-    const response = await axios.get('/db.json');  // Ana dizindeki db.json dosyasına erişim
-
+    const response = await axios.get('/db.json');
     const categories = response.data.categories;
-
-    // categoryId'ye göre ilgili kategoriyi buluyoruz
     const selectedCategory = categories.find((cat) => cat.id === parseInt(categoryId));
-
-    // Kategoriyi bulduysak category state'ini güncelliyoruz
     if (selectedCategory) {
       category.value = selectedCategory;
     } else {
-      // Eğer kategori bulunamazsa, uygun bir mesaj gösterilebilir.
       console.error('Kategori bulunamadı');
     }
   } catch (error) {
@@ -58,5 +51,5 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Stil ayarları burada yapılabilir */
+/* Gerekirse özel stiller burada eklenebilir */
 </style>
